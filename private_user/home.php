@@ -216,19 +216,19 @@ if(!isset($_SESSION["email_address"])){
 </ul>
 <div class="tab-content pt-2 pl-1" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-    <img src="img/67.jpg" class="rounded" alt="..."><hr>
+    <img src="img/67.jpg" class="rounded" alt="...  "width="100px" height="100px"><hr>
     <div class="">
      
-     <div class=""><p><b style="font-size: 1.1em">Full Name:</b>CampCodes</p></div>
+     <div class=""><p><b style="font-size: 1.1em">Full Name:</b>$4Boy</p></div>
      <div class=""><p><b style="font-size: 1.1em">Position:</b>Software Engineer</p></div>
 
   </div>
   <hr>
   </div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-   <h6 style="font-size: 1.1em">file management system (fMS)</h6><Hr>
-  is a system (based on computer programs in the case of the management of digital documents) used to track, manage and store documents and reduce paper. Most are capable of keeping a record of the various versions created and modified by different users (history tracking).</div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"><h6 style="font-size: 1.1em">Contact Number</h6><Hr><br><div class=""><p><b style="font-size: 1.1em">Cellphone #:</b>09991050748</p></div><p><b style="font-size: 1.1em">Address :</b>Philippines</p>
+   <h6 style="font-size: 1.1em">Kananon</h6><Hr>
+  BOD 17/09/2542 </div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"><h6 style="font-size: 1.1em">Contact Number</h6><Hr><br><div class=""><p><b style="font-size: 1.1em">Cellphone #:</b>09991050748</p></div><p><b style="font-size: 1.1em">Address :</b>Thailand</p>
 </div><hr><br>
 <!--   <div class="card">
   <ul class="list-group list-group-flush">
@@ -251,13 +251,13 @@ if(!isset($_SESSION["email_address"])){
   <div class="card-body">
 
     <!-- Title -->
-    <h4 class="card-title">File Document</h4><hr>
+    <h4 class="card-title">Food recommend</h4><hr>
     <!-- Text -->
 
     <ul>
-      <li> <p>Ensuring changes and revisions are clearly identified</p></li>
-      <li> <p>Ensuring that documents remain legible and identifiable</p></li>
-      <li> <p>Preventing “unintended” use of obsolete documents</p></li>
+      <li> <p>Padthai</p></li>
+      <li> <p>Gangsom</p></li>
+      <li> <p>Padkapao</p></li>
     </ul>
     <!-- Button -->
 <!--     <a href="#" class="btn btn-primary">Button</a> -->
