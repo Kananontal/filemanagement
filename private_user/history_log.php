@@ -150,7 +150,7 @@ if(!isset($_SESSION["email_address"])){
     <a href="home.php"><button type="button" class="btn btn-info"><i class="fas fa-chevron-circle-left"></i>  Home</button></a>
     </div>
 <hr>
-  <table id="dtable" class = "table table-striped" style="">
+  <table id="dtable" class = "table table-striped" >
      <thead>
 
     <!-- <th>ID</th> -->
