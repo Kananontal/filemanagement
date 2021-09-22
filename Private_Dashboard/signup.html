@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -79,10 +80,14 @@
 
         <!-- Material form register -->
         <form action="admin_login.php" method="POST">
-            <p class="h4 text-center py-4">ADMIN SECURITY </p>
+            <p class="h4 text-center py-4">Register</p>
 
             <!-- Material input text -->
-
+            <div class="md-form">
+              <i class="fa fa-user prefix grey-text"></i>
+              <input type="email" id="materialFormCardEmailEx" name="admin_user" class="form-control" >
+              <label for="materialFormCardEmailEx" class="font-weight-light">Your Name</label>
+          </div>
             <div class="md-form">
                 <i class="fa fa-envelope prefix grey-text"></i>
                 <input type="email" id="materialFormCardEmailEx" name="admin_user" class="form-control" >
@@ -94,13 +99,17 @@
                 <input type="password" id="materialFormCardPasswordEx" name="admin_password" class="form-control">
                 <label for="materialFormCardPasswordEx" class="font-weight-light">Your password</label>
             </div>
+          <!-- Material input password -->
+          <div class="md-form">
+              <i class="fa fa-phone prefix grey-text"></i>
+              <input type="password" id="materialFormCardPasswordEx" name="admin_password" class="form-control">
+              <label for="materialFormCardPasswordEx" class="font-weight-light">tel</label>
+          </div>
 
             <div class="text-center py-2 mt-10">
-                <button class="btn btn-danger btn-lg btn-block" name = "adminlog" id="login" type="submit">Sign In</button>
+                <button class="btn btn-danger btn-lg btn-block" name = "adminlog" id="login" type="submit">submit</button>
             </div>
-            <div class="text-center py-2 mt-10">
-            <a href="register.php"><button class="btn btn-default btn-lg btn-block" input type="button" type="submit">Sign Up</button>
-          </div>
+      
 
         </form>
         <!-- Material form register -->

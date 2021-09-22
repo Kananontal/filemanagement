@@ -453,8 +453,12 @@ $q = mysqli_query($conn,"select * from admin_login where id = '$id'") or die (my
           <div class="md-form mb-4">
           <i class="fas fa-user prefix grey-text"></i>
           <input type="text" id="orangeForm-pass" name="status" value = "Employee" class="form-control validate" readonly="">
-          <label data-error="wrong" data-success="right" for="orangeForm-pass">User Status</label>
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Status</label>
+          <input type="radio" name="gender" value="admin">admin
+          <input type="radio" name="gender" value="staff">staff
+          <input type="radio" name="gender" value="engineer">engineer
         </div>
+        
       
       </div>
       <div class="modal-footer d-flex justify-content-center">
