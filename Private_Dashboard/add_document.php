@@ -195,8 +195,6 @@ position:absolute;
           <i class="fas fa-users"></i>  View User</a>
         <a href="add_document.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-file-medical"></i> Add Document</a>
-        <a href="view_userfile.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-folder-open"></i> View User File</a>
             <a href="admin_log.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-chalkboard-teacher"></i> Admin logged</a>
               <a href="user_log.php" class="list-group-item list-group-item-action waves-effect">

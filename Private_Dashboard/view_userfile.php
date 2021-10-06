@@ -179,10 +179,10 @@ position:absolute;
 
       <a class="logo-wrapper waves-effect">
       
-        <img src="img/fastfood.png" width="75px" height="75px;" class="img-fluid" alt="">
+        <img src="img/images.jpg" width="150px" height="200px;" class="img-fluid" alt="">
       </a>
 
-       <div class="list-group list-group-flush">
+     <div class="list-group list-group-flush">
         <a href="dashboard.php" class="list-group-item active waves-effect">
           <i class="fas fa-chart-pie mr-3"></i>Dashboard
         </a>
@@ -196,6 +196,8 @@ position:absolute;
           <i class="fas fa-users"></i>  View User</a>
         <a href="add_document.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-file-medical"></i> Add Document</a>
+        <a href="view_userfile.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-folder-open"></i> View User File</a>
             <a href="admin_log.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-chalkboard-teacher"></i> Admin logged</a>
               <a href="user_log.php" class="list-group-item list-group-item-action waves-effect">
@@ -331,17 +333,15 @@ position:absolute;
  
  <div class="col-md-12">
 
-  <table id="dtable" class = "table table-striped" "">
+ <table id="dtable" class = "table table-striped">
      <thead>
 
-    <!-- <th>ID</th> -->
-    <th>USER LOGGED</th>    
-     <th>YOUR IP</th>
-     <th>HOST</th>
-     <th>ACTION</th> 
-     <th>TIMEIN</th>
-     <th>ACTION</th> 
-     <th>TIMEOUT</th>
+    <th>Filename</th>
+    <th>FileSize</th>
+    <th>File Uploader</th>
+     <th>Status</th>   
+     <th>Date/Time</th>
+
 
 
 </thead>
@@ -353,28 +353,25 @@ position:absolute;
    
         require_once("include/connection.php");
 
-      $query = mysqli_query($conn,"SELECT * from history_log") or die (mysqli_error($conn));
+      $query = mysqli_query($conn,"SELECT DISTINCT ID,NAME,SIZE,EMAIL,ADMIN_STATUS,TIMERS,DOWNLOAD FROM upload_files WHERE ADMIN_STATUS = 'Employee' group by NAME DESC") or die (mysqli_error($con));
       while($file=mysqli_fetch_array($query)){
-       //  $id =  $file['id'];
-         $name =  $file['email_address'];
-         $ip =  $file['ip'];
-         $host =  $file['host'];
-         $action =  $file['action'];
-         $logintime =  $file['login_time'];
-         $actions =  $file['actions'];
-         $logouttime =  $file['logout_time'];
-      
+         $id =  $file['ID'];
+         $name =  $file['NAME'];
+         $size =  $file['SIZE'];
+          $email =  $file['EMAIL'];
+         $uploads =  $file['ADMIN_STATUS'];
+         $time =  $file['TIMERS'];
+  
     
       ?>
      
-      <!-- <td><?php echo  $id; ?></td> -->
-      <td><?php echo $name; ?></td>
-       <td><?php echo $ip; ?></td>
-      <td><?php echo $host; ?></td>
-      <td><?php echo $action; ?></td>
-      <td><?php echo $logintime; ?></td>
-      <td><?php echo $actions; ?></td>
-      <td><?php echo $logouttime; ?></td>
+      <td><?php echo  $name; ?></td>
+      <td><?php echo floor($size / 1000) . ' KB'; ?></td>
+      <td><?php echo $email; ?></td>
+       <td><?php echo $uploads; ?></td>
+       <td><?php echo $time; ?></td>
+   
+    <!--   <td><a href='downloads.php?file_id=<?php echo $id; ?>'><button class='btn btn-warning' value=''><i class="fas fa-download"></i></button></a> <a href="../uploads/<?php echo  $name; ?>"><button class='btn btn-info' value='' ><i class="fas fa-eye"></i></button></a> <a href='delete.php?ID=<?php echo $id; ?>'><button class='btn btn-danger' value=''><i class="fas fa-trash-alt"></i></button></a></td> -->
 
     </tr>
 <?php } ?>
@@ -384,7 +381,7 @@ position:absolute;
     <!--Copyright-->
     <hr></div>
     <div class="footer-copyright py-3">
-  <p>All right Reserved 2021&copy; <?php echo date('Y');?> Created By:$4Boy</p>
+   <p>All right Reserved 2021&copy; <?php echo date('Y');?> Created By:CampCodes</p>
     </div>
     <!--/.Copyright-->
 
